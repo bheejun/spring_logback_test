@@ -23,6 +23,13 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    implementation("ch.qos.logback:logback-classic:1.4.14") // Added Logback Classic
+    implementation("ca.pjer:logback-awslogs-appender:1.6.0")
+    implementation("org.codehaus.janino:janino:3.1.7")
+
+    // SLF4J Dependency - Might not be needed if using Spring Boot's default logging
+    // implementation ("org.slf4j:slf4j-api:1.7.30")
 }
 
 tasks.withType<KotlinCompile> {
